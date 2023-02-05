@@ -114,14 +114,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class goro extends StatefulWidget {
-  const goro({key});
+class hello extends StatefulWidget {
+  const hello({key});
 
   @override
-  State<goro> createState() => _goroState();
+  State<hello> createState() => _helloState();
 }
 
-class _goroState extends State<goro> {
+class _helloState extends State<hello> {
   @override
   Widget build(BuildContext context) {
     return Container();
