@@ -116,10 +116,13 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class kami extends StatelessWidget {
-  const kami({key});
+  kami({key});
 
+  int a = 10;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 }

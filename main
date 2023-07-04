@@ -1,0 +1,296 @@
+[1mdiff --git a/android/build.gradle b/android/build.gradle[m
+[1mindex a10bfe5..58a8c74 100644[m
+[1m--- a/android/build.gradle[m
+[1m+++ b/android/build.gradle[m
+[36m@@ -6,7 +6,7 @@[m [mbuildscript {[m
+     }[m
+ [m
+     dependencies {[m
+[31m-        classpath 'com.android.tools.build:gradle:7.2.1'[m
+[32m+[m[32m        classpath 'com.android.tools.build:gradle:7.2.0'[m
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"[m
+     }[m
+ }[m
+[1mdiff --git a/android/gradle/wrapper/gradle-wrapper.properties b/android/gradle/wrapper/gradle-wrapper.properties[m
+[1mindex dcf0f19..3c472b9 100644[m
+[1m--- a/android/gradle/wrapper/gradle-wrapper.properties[m
+[1m+++ b/android/gradle/wrapper/gradle-wrapper.properties[m
+[36m@@ -2,4 +2,4 @@[m [mdistributionBase=GRADLE_USER_HOME[m
+ distributionPath=wrapper/dists[m
+ zipStoreBase=GRADLE_USER_HOME[m
+ zipStorePath=wrapper/dists[m
+[31m-distributionUrl=https\://services.gradle.org/distributions/gradle-7.6-all.zip[m
+[32m+[m[32mdistributionUrl=https\://services.gradle.org/distributions/gradle-7.5-all.zip[m
+[1mdiff --git a/lib/main.dart b/lib/main.dart[m
+[1mindex 88c0fe5..008fa38 100644[m
+[1m--- a/lib/main.dart[m
+[1m+++ b/lib/main.dart[m
+[36m@@ -5,7 +5,7 @@[m [mvoid main() {[m
+ }[m
+ [m
+ class MyApp extends StatelessWidget {[m
+[31m-  const MyApp({key});[m
+[32m+[m[32m  const MyApp({super.key});[m
+ [m
+   // This widget is the root of your application.[m
+   @override[m
+[36m@@ -30,7 +30,7 @@[m [mclass MyApp extends StatelessWidget {[m
+ }[m
+ [m
+ class MyHomePage extends StatefulWidget {[m
+[31m-  const MyHomePage({key, this.title});[m
+[32m+[m[32m  const MyHomePage({super.key, required this.title});[m
+ [m
+   // This widget is the home page of your application. It is stateful, meaning[m
+   // that it has a State object (defined below) that contains fields that affect[m
+[36m@@ -113,12 +113,3 @@[m [mclass _MyHomePageState extends State<MyHomePage> {[m
+     );[m
+   }[m
+ }[m
+[31m-[m
+[31m-class kami extends StatelessWidget {[m
+[31m-  const kami({key});[m
+[31m-[m
+[31m-  @override[m
+[31m-  Widget build(BuildContext context) {[m
+[31m-    return Container();[m
+[31m-  }[m
+[31m-}[m
+[1mdiff --git a/lib/models/student.dart b/lib/models/student.dart[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/lib/view/auth/sign_in_screen.dart b/lib/view/auth/sign_in_screen.dart[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/lib/view/dashbord/home_screen.dart b/lib/view/dashbord/home_screen.dart[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/lib/widgets/custom_button.dart b/lib/widgets/custom_button.dart[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/pubspec.lock b/pubspec.lock[m
+[1mindex edb99d8..459da2c 100644[m
+[1m--- a/pubspec.lock[m
+[1m+++ b/pubspec.lock[m
+[36m@@ -5,49 +5,56 @@[m [mpackages:[m
+     dependency: transitive[m
+     description:[m
+       name: async[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: bfe67ef28df125b7dddcea62755991f807aa39a2492a23e1550161692950bbe0[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "2.9.0"[m
+[32m+[m[32m    version: "2.10.0"[m
+   boolean_selector:[m
+     dependency: transitive[m
+     description:[m
+       name: boolean_selector[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "6cfb5af12253eaf2b368f07bacc5a80d1301a071c73360d746b7f2e32d762c66"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "2.1.0"[m
+[32m+[m[32m    version: "2.1.1"[m
+   characters:[m
+     dependency: transitive[m
+     description:[m
+       name: characters[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: e6a326c8af69605aec75ed6c187d06b349707a27fbff8222ca9cc2cff167975c[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.2.1"[m
+   clock:[m
+     dependency: transitive[m
+     description:[m
+       name: clock[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: cb6d7f03e1de671e34607e909a7213e31d7752be4fb66a86d29fe1eb14bfb5cf[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.1.1"[m
+   collection:[m
+     dependency: transitive[m
+     description:[m
+       name: collection[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: cfc915e6923fe5ce6e153b0723c753045de46de1b4d63771530504004a45fae0[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.16.0"[m
+[32m+[m[32m    version: "1.17.0"[m
+   cupertino_icons:[m
+     dependency: "direct main"[m
+     description:[m
+       name: cupertino_icons[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: e35129dc44c9118cee2a5603506d823bab99c68393879edb440e0090d07586be[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.0.5"[m
+   fake_async:[m
+     dependency: transitive[m
+     description:[m
+       name: fake_async[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "511392330127add0b769b75a987850d136345d9227c6b94c96a04cf4a391bf78"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.3.1"[m
+   flutter:[m
+[36m@@ -59,7 +66,8 @@[m [mpackages:[m
+     dependency: "direct dev"[m
+     description:[m
+       name: flutter_lints[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: aeb0b80a8b3709709c9cc496cdc027c5b3216796bc0af0ce1007eaf24464fd4c[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "2.0.1"[m
+   flutter_test:[m
+[36m@@ -67,39 +75,52 @@[m [mpackages:[m
+     description: flutter[m
+     source: sdk[m
+     version: "0.0.0"[m
+[32m+[m[32m  js:[m
+[32m+[m[32m    dependency: transitive[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      name: js[m
+[32m+[m[32m      sha256: "5528c2f391ededb7775ec1daa69e65a2d61276f7552de2b5f7b8d34ee9fd4ab7"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+[32m+[m[32m    source: hosted[m
+[32m+[m[32m    version: "0.6.5"[m
+   lints:[m
+     dependency: transitive[m
+     description:[m
+       name: lints[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "5e4a9cd06d447758280a8ac2405101e0e2094d2a1dbdd3756aec3fe7775ba593"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "2.0.1"[m
+   matcher:[m
+     dependency: transitive[m
+     description:[m
+       name: matcher[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "16db949ceee371e9b99d22f88fa3a73c4e59fd0afed0bd25fc336eb76c198b72"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "0.12.12"[m
+[32m+[m[32m    version: "0.12.13"[m
+   material_color_utilities:[m
+     dependency: transitive[m
+     description:[m
+       name: material_color_utilities[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: d92141dc6fe1dad30722f9aa826c7fbc896d021d792f80678280601aff8cf724[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "0.1.5"[m
+[32m+[m[32m    version: "0.2.0"[m
+   meta:[m
+     dependency: transitive[m
+     description:[m
+       name: meta[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "6c268b42ed578a53088d834796959e4a1814b5e9e164f147f580a386e5decf42"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.8.0"[m
+   path:[m
+     dependency: transitive[m
+     description:[m
+       name: path[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: db9d4f58c908a4ba5953fcee2ae317c94889433e5024c27ce74a37f94267945b[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.8.2"[m
+   sky_engine:[m
+[36m@@ -111,50 +132,57 @@[m [mpackages:[m
+     dependency: transitive[m
+     description:[m
+       name: source_span[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: dd904f795d4b4f3b870833847c461801f6750a9fa8e61ea5ac53f9422b31f250[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.9.0"[m
+[32m+[m[32m    version: "1.9.1"[m
+   stack_trace:[m
+     dependency: transitive[m
+     description:[m
+       name: stack_trace[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: c3c7d8edb15bee7f0f74debd4b9c5f3c2ea86766fe4178eb2a18eb30a0bdaed5[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.10.0"[m
+[32m+[m[32m    version: "1.11.0"[m
+   stream_channel:[m
+     dependency: transitive[m
+     description:[m
+       name: stream_channel[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "83615bee9045c1d322bbbd1ba209b7a749c2cbcdcb3fdd1df8eb488b3279c1c8"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "2.1.0"[m
+[32m+[m[32m    version: "2.1.1"[m
+   string_scanner:[m
+     dependency: transitive[m
+     description:[m
+       name: string_scanner[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "556692adab6cfa87322a115640c11f13cb77b3f076ddcc5d6ae3c20242bedcde"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.1.1"[m
+[32m+[m[32m    version: "1.2.0"[m
+   term_glyph:[m
+     dependency: transitive[m
+     description:[m
+       name: term_glyph[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: a29248a84fbb7c79282b40b8c72a1209db169a2e0542bce341da992fe1bc7e84[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.2.1"[m
+   test_api:[m
+     dependency: transitive[m
+     description:[m
+       name: test_api[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: ad540f65f92caa91bf21dfc8ffb8c589d6e4dc0c2267818b4cc2792857706206[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "0.4.12"[m
+[32m+[m[32m    version: "0.4.16"[m
+   vector_math:[m
+     dependency: transitive[m
+     description:[m
+       name: vector_math[m
+[31m-      url: "https://pub.dartlang.org"[m
+[32m+[m[32m      sha256: "80b3257d1492ce4d091729e3a67a60407d227c27241d6927be0130c98e741803"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "2.1.2"[m
+[32m+[m[32m    version: "2.1.4"[m
+ sdks:[m
+[31m-  dart: ">=2.17.0 <3.0.0"[m
+[32m+[m[32m  dart: ">=2.19.0 <4.0.0"[m
+[1mdiff --git a/pubspec.yaml b/pubspec.yaml[m
+[1mindex 4558f7c..81838e8 100644[m
+[1m--- a/pubspec.yaml[m
+[1m+++ b/pubspec.yaml[m
+[36m@@ -19,7 +19,7 @@[m [mpublish_to: 'none' # Remove this line if you wish to publish to pub.dev[m
+ version: 1.0.0+1[m
+ [m
+ environment:[m
+[31m-  sdk: '>=2.2.0 <3.0.0'[m
+[32m+[m[32m  sdk: '>=2.19.0 <3.0.0'[m
+ [m
+ # Dependencies specify other packages that your package needs in order to work.[m
+ # To automatically upgrade your package dependencies to the latest versions[m
